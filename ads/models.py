@@ -64,7 +64,7 @@ class Radcheck(models.Model):
     organization = models.CharField(max_length=253)
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'radcheck'
 
 
