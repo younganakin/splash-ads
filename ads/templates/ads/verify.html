@@ -1,0 +1,46 @@
+{% extends "ads/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'ads/css/verify.css' %}" />
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
+
+{% block title %}Java Coffee House-Verify{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="text-center" style="padding-top: 30px;">
+            <img class="img-responsive" src="{% static 'ads/images/logo.svg' %}" alt="logo" style="width: 200px;">
+        </div>
+        <br />
+        <div class="row justify-content-center">
+            <form id="verify_form" action="{% url 'ads:verify' %}" method="post">
+                <div class="form-group">
+                    <label for="password" style="font-weight: bold;">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <small id="password" class="form-text text-muted" style="font-weight: bolder;">Enter the code you
+                        have recieved on your
+                        phone.</small>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-artcaffee">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="row justify-content-center" style="padding-top: 50px">
+            <iframe src="http://adm.brandfi.co.ke/ads/random-ad/content/high/" style="overflow:hidden;"></iframe>
+        </div>
+    </div>
+</div>
+<br />
+<footer class="footer text-center" id="footer">
+    <div class="container">
+        <h6 style="font-weight: bolder; font-size: 14px;">&copy; Copyright 2018 Java House Kenya</h6>
+    </div>
+</footer>
+{% endblock %}
