@@ -19,7 +19,7 @@ class Nas(models.Model):
     description = models.CharField(max_length=200, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'nas'
 
 
@@ -50,7 +50,7 @@ class Radacct(models.Model):
     framedipaddress = models.CharField(max_length=15)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'radacct'
 
 
@@ -64,7 +64,7 @@ class Radcheck(models.Model):
     organization = models.CharField(max_length=253)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'radcheck'
 
 
@@ -75,7 +75,7 @@ class Radgroupcheck(models.Model):
     value = models.CharField(max_length=253)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'radgroupcheck'
 
 
@@ -86,7 +86,7 @@ class Radgroupreply(models.Model):
     value = models.CharField(max_length=253)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'radgroupreply'
 
 
@@ -98,7 +98,7 @@ class Radpostauth(models.Model):
     authdate = models.DateTimeField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'radpostauth'
 
 
@@ -109,7 +109,7 @@ class Radreply(models.Model):
     value = models.CharField(max_length=253)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'radreply'
 
 
@@ -119,5 +119,5 @@ class Radusergroup(models.Model):
     priority = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'radusergroup'
